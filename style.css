@@ -1,0 +1,264 @@
+html {
+ font-family: Arial, Helvetica, sans-serif;
+ line-height: 1.5;
+ background-color: #5f45bb;
+ background-image: linear-gradient(to bottom right, #180cac, #d054e4);
+}
+
+html, body, .content {
+    min-height: 100vh;
+}
+
+ .wallpaper {
+        display: block;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        position: fixed;
+        background-image: url("mountains.jpg");
+        background-size: cover;
+        opacity: 0;
+        background-position: center;
+        transform: scale(1.1);
+        transition-property: transform, opacity;
+        transition-duration: 1s;
+        transition-delay: 1.2s;
+
+    }
+
+    .is-loaded.wallpaper{
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.side {
+margin-left: 160px;
+}
+
+
+.picture-image{
+    box-shadow: 0 50px 60px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    animation-name: picImage;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+}
+
+@keyframes picImage {
+    from {
+      opacity: 0;
+      transform: scale(1.2) translateY(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  
+.button{
+    background-color: rgb(255, 255, 255); /* white */
+    border: none;
+    color: #5f45bb;
+    padding: 14px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* transition-property: box-shadow, transform; */
+    transition: margin-top 1s;
+}
+
+.button:hover {
+   margin-top: 5px;
+   box-shadow: #180cac;
+   box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.name {
+    color: white;
+}
+
+.description {
+    width: 400px;
+    font-size: 22px;
+    color: white;
+}
+
+ul .social{
+    display: flex;
+    flex-direction: row;
+}
+
+.social svg {
+    /* display: flex; */
+    margin-top: 1.5 rem;
+}
+
+.social svg {
+    /* display: flex; */
+    color: white;
+    opacity: 0.6;
+    font-size: 0px;
+    transform: scale(1);
+    transition: all 0.5s;
+
+}
+
+.social svg:hover {
+   transform: scale(1.4);
+   opacity: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+@keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .social li {
+    /* display: inline-block; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    
+  }
+
+  .twiter {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.3s;
+  }
+  
+  .github {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.5s;
+  }
+
+  .linkedin {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.7s;
+  }
+
+  .hrAnim {
+
+  }
+
+.hr {
+    background-color: red;
+    height: 1px;
+    border: none;
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+
+
+.job {
+    color: #ffe479;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.name, hr, job {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+}
+
+.name {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.3s;
+}
+
+.hr {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.5s;
+}
+.job {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.7s;
+}
+
+.description {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 0.9s;
+}
+
+.button {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: slideUp;
+    animation-delay: 1.1s;
+}
+
+/* @media (max-width: 768px) {
+    .content {
+    }
+} */
+
+@media (max-width: 769px) {
+    /* taisykles tik mobile */
+    .content {
+        flex-direction: column;
+    }
+    .side {
+        margin-left: 0px;
+        }
+}
+
+
+
+svg {
+    max-width: 20px;
+}
